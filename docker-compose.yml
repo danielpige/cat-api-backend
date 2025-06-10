@@ -1,17 +1,4 @@
 services:
-  backend:
-    build: .
-    ports:
-      - "${PORT}:${PORT}"
-    volumes:
-      - .:/app
-    depends_on:
-      - mongo
-    env_file:
-      - .env
-    environment:
-      - MONGO_URI=${MONGO_URI}
-
   mongo:
     image: mongo:6
     ports:
