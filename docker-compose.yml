@@ -1,0 +1,23 @@
+services:
+  backend:
+    build: .
+    ports:
+      - "${PORT}:${PORT}"  # ✅ CORREGIDO: usar ${PORT}, no {PORT}
+    volumes:
+      - .:/app
+    depends_on:
+      - mongo
+    env_file:
+      - .env  # ✅ USAR .env en lugar de escribir variables directamente
+    environment:
+      - MONGO_URI=${MONGO_URI}  # ✅ Puedes seguir pasando variables si lo deseas
+
+  mongo:
+    image: mongo:6
+    ports:
+      - "${MONGO_PORT}:${MONGO_PORT}"  # ✅ ${MONGO_PORT}, no {MONGO_PORT}
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
