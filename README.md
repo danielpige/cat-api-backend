@@ -29,8 +29,8 @@ Este proyecto es una API RESTful construida con **Node.js**, **Express**, **Mong
 ```
 bash
 ```
-git clone https://github.com/tu-usuario/nombre-repo.git
-cd nombre-repo
+git clone https://github.com/danielpige/cat-api-backend.git
+cd cat-api-backend
 
 ## npm install
 
