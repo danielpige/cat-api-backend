@@ -18,4 +18,4 @@ RUN npm run build
 EXPOSE ${PORT}
 
 # Comando para correr la app
-CMD ["node", "dist/server.js"]
+CMD ["node", "dist/server.ts"]
